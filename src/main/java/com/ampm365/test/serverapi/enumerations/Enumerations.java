@@ -14,7 +14,7 @@ public class Enumerations {
 	}
 	
 	public static enum ParameterType {
-		VALID,INVALID,CUSTOM
+		VALID,FULL,CUSTOM
 	}
 	
 	public static enum RequestDomain{

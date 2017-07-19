@@ -8,20 +8,24 @@ public class MemberRegTestParameter extends TestParameter{
 	
 	public MemberRegTestParameter(TestParameter testparameter){
 		super(testparameter);
-	};
+	}
+	
+	public MemberRegTestParameter() {
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public String toString(){
-		parameter = "idCard" + getIdCard() + ";loginPwd" + getLoginPwd() + ";mobile" + getMobile() + ";name" + getName() 
-				+ ";promoterId" + getPromoterId() + ";pubPltmId" + getPubPltmId() + ";regchanlCde" + getChanlCde()
-				+ ";regIp" + getRegIp() + ";salesSmsAcptIndc" + getSalesSmsAcptIndc() + ";sex" + getSex();
+		parameter = "loginPwd" + getLoginPwd() + ";mobile" + getMobile() +  
+				 ";promoterId" + getPromoterId() + ";pubPltmId" + getPubPltmId() + 
+				 ";regchanlCde" + getChanlCde();
 		return parameter;
 	}
 	
 	public String toParameterString(){
 		if(parameter != null && parameter != ""){
-			parameter = Constants.MemberReg + parameter.replaceAll(";", "&");
+			parameter = Constants.MemberReg + parameter.replace(";", "&");
 		}else{
-			parameter = Constants.MemberReg + toString().replaceAll(";", "&");
+			parameter = Constants.MemberReg + toString().replace(";", "&");
 		}
 		
 		return parameter;

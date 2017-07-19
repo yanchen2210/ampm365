@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="DatabaseMapper.mmb_info">
+	<select id="getMemberInfoByMobile" parameterType="String" resultType="com.ampm365.test.serverapi.entity.Member">
+		select * from mmb_info where mobile = #{mobile}
+	</select>
+	
+	<insert id="insertNewMember" >
+		<selectKey keyProperty="id" resultType="String" order="BEFORE">
+			select nextval('seq_mmb_info')
+		</selectKey>
+		insert into mmb_info (id,mobile,mmb_sts_indc,reg_time,sales_sms_acpt_indc,verson,create_date,update_date,del_flag) 
+		value (#{id},#{mobile},#{mmb_sts_indc},#{reg_time},#{sales_sms_acpt_indc},#{verson},#{create_date},#{update_date},#{del_flag})
+	</insert>
+</mapper>

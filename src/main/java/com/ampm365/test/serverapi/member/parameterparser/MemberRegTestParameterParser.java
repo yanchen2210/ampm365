@@ -9,13 +9,13 @@ public class MemberRegTestParameterParser extends TestParameterParser{
 	@Override
 	public MemberRegTestParameter parser(ParameterType parameterType, Boolean isAuto){
 		if(memberRegTestParameter == null){
-			new MemberRegTestParameter();
+			memberRegTestParameter = new MemberRegTestParameter();
 		}
 		switch (parameterType) {
 		case VALID:
 			memberRegTestParameter.setMobile(TestDataGenerator.generatorMobile());
-			memberRegTestParameter.setPromotionCde("01");
-			memberRegTestParameter.setChanlCde("chanl0001");
+			memberRegTestParameter.setPromotionCde("02");
+			memberRegTestParameter.setChanlCde("chanl0002");
 			break;
 		case FULL:
 			

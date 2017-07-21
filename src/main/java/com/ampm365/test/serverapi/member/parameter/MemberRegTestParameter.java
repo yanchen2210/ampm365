@@ -12,12 +12,12 @@ public class MemberRegTestParameter extends TestParameter{
 	
 	public MemberRegTestParameter() {
 		// TODO Auto-generated constructor stub
+		
 	}
-	@Override
 	public String toString(){
-		parameter = "loginPwd" + getLoginPwd() + ";mobile" + getMobile() +  
-				 ";promoterId" + getPromoterId() + ";pubPltmId" + getPubPltmId() + 
-				 ";regchanlCde" + getChanlCde();
+		parameter = "loginPwd=" + getLoginPwd() + ";mobile=" + getMobile() +  
+				 ";promoterId=" + getPromoterId() + ";pubPltmId=" + getPubPltmId() + 
+				 ";regchanlCde=" + getChanlCde();
 		return parameter;
 	}
 	

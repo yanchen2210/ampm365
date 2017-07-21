@@ -15,7 +15,7 @@ public class Constants {
 	
 	//HTTP Request URL
 	//会员相关的URL
-	private static final String MemberBaseUrl = "mms-customer/";
+	private static final String MemberBaseUrl = "/mms-customer/";
 	public static final String MemberReg = MemberBaseUrl + "member/register?";
 	public static final String UpdateInfo = MemberBaseUrl + "member/update?";
 	public static final String ChangeGrowthVal = MemberBaseUrl + "member/change?";

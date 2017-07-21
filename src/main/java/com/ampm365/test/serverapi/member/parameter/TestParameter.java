@@ -29,17 +29,17 @@ public class TestParameter {
 	 * All Parameter Is Invalid
 	 */
 	public TestParameter(){
-		this.idCard = TestDataGenerator.generatorIdCard(IdCard.INVALID);
-		this.loginPwd = "";
-		this.mobile = TestDataGenerator.generatorMobile();
-		this.name = "Tester";
-		this.promoterId = "10000";
-		this.promotionCde = "";
-		this.pubPltmId = "pubPltmId";
-		this.chanlCde = "Chanl002";
-		this.regIp = "127.0.0.1";
-		this.salesSmsAcptIndc = "1";
-		this.sex ="1";
+//		this.idCard = TestDataGenerator.generatorIdCard(IdCard.INVALID);
+//		this.loginPwd = "";
+//		this.mobile = TestDataGenerator.generatorMobile();
+//		this.name = "Tester";
+//		this.promoterId = "10000";
+//		this.promotionCde = "";
+//		this.pubPltmId = "pubPltmId";
+//		this.chanlCde = "Chanl002";
+//		this.regIp = "127.0.0.1";
+//		this.salesSmsAcptIndc = "1";
+//		this.sex ="1";
 	}
 	
 	public String toString(){

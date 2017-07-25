@@ -27,7 +27,9 @@ public class Enumerations {
 		VALID(),INVALID(),EMPTY();
 	}
 	
-	
+	public static enum GetMemberInfo{
+		INFO(),LvINFO(),GrowthVal()
+	}
 	/**
 	 * @category  User Phone OS
 	 */

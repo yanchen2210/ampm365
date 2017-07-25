@@ -29,18 +29,13 @@ public class ServerApiTest {
 	public CloseableHttpClient httpClient = HttpClients.createDefault();
 	
 	public void sendGetRequest() throws ClientProtocolException, IOException{
-//		if (httpClient != null) {
-//			HttpGet getRequest = new HttpGet(requestUrl);
-//			if (getRequest != null) {
-//				response = httpClient.execute(getRequest);
-//			}
-//		}
 		if (httpClient !=null){
 			HttpGet getRequest = new HttpGet(requesturl);
 			if (getRequest != null){
 				response = httpClient.execute(getRequest);
 			}
 		}
+		response.close();
 	}
 	
 	public void sendPostRequest(HttpEntity httpEntity) throws ClientProtocolException, IOException{

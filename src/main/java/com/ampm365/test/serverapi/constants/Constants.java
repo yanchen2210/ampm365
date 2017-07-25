@@ -21,7 +21,7 @@ public class Constants {
 	public static final String ChangeGrowthVal = MemberBaseUrl + "member/change?";
 	public static final String FindMemberInfoByMobile = MemberBaseUrl + "member/{mobile}/1";
 	public static final String FindMemberLvChangeByMobile = MemberBaseUrl + "member/{mobile}/2";
-	public static final String FIndMemberGrowChangeByMobile = MemberBaseUrl + "member/{mobile}/3";
+	public static final String FindMemberGrowChangeByMobile = MemberBaseUrl + "member/{mobile}/3";
 	public static final String MemberLogin = MemberBaseUrl + "account/login?";
 	public static final String ModifyPwd = MemberBaseUrl + "account/update/1";
 	public static final String ResetPwd = MemberBaseUrl + "account/update/2";

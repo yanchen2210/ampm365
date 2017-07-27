@@ -57,10 +57,10 @@ public class TestDataGenerator {
 		return idCard;
 	}
 	
-	public static String generatorPassword(String orginal, String publickey) throws Exception{
-		byte[] loginPwd = null;
-		byte[] encodedData = RSA.encryptByPublicKey(orginal.getBytes(), publickey);
-		loginPwd = Base64.encode(encodedData);
-		return loginPwd.toString();
+	public static String generatorPassword(String password) throws Exception{
+		String loginPwd = null;
+		byte[] encodedData = RSA.encryptByPublicKey(password.getBytes(), publickey);
+		loginPwd = Base64.toBase64String(encodedData);
+		return loginPwd;
 	}
 }

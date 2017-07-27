@@ -1,15 +1,12 @@
 package com.ampm365.test.serverapi.member;
 
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.conn.util.DomainType;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.ibatis.logging.log4j.Log4jImpl;
 import org.testng.Assert;

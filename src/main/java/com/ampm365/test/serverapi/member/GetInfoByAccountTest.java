@@ -11,8 +11,8 @@ import com.ampm365.test.serverapi.enumerations.Enumerations.RequestDomain;
 import com.ampm365.test.serverapi.enumerations.Enumerations.GetMemberInfo;
 import com.ampm365.test.serverapi.member.parameter.GetInfoTestParameter;
 
-public class GetInfoByAccount extends ServerApiTest{
-	private Log4jImpl logger = new Log4jImpl(GetInfoByAccount.class.getName());
+public class GetInfoByAccountTest extends ServerApiTest{
+	private Log4jImpl logger = new Log4jImpl(GetInfoByAccountTest.class.getName());
 	private GetInfoTestParameter getInfoTestParameter;
 	@Test
 	public void GetMemberInfo() throws ClientProtocolException, IOException {

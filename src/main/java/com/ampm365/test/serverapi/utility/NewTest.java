@@ -1,8 +1,12 @@
 package com.ampm365.test.serverapi.utility;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.ibatis.logging.log4j.Log4jImpl;
+import org.apache.velocity.runtime.directive.Foreach;
 import org.testng.annotations.Test;
 
 import com.ampm365.test.serverapi.base.ServerApiTest;
@@ -29,6 +33,12 @@ public class NewTest extends ServerApiTest {
 //	  memberinfo1.setUpdate_date(nowTime);
 //	  memberinfo1.setDel_flag("0");
 //	  DatabaseUtility.getSqlSession().insert(Constants.INSERT_NEW_MEMBER, memberinfo1);
-	  logger.debug(RedisHandler.getVerificationCode("18519702412"));
+	  Map<String, String> map = new HashMap<String, String>();
+	  map.put("1", "1");
+	  map.put("2", "2");
+	  map.put("3", "3");
+	  for(Entry<String, String> item : map.entrySet()){
+		  System.out.println("key" + item.getKey() + "value" + item.getValue());
+	  }
   }
 }

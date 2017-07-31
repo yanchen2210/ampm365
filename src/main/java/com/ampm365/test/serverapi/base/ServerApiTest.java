@@ -25,6 +25,7 @@ public class ServerApiTest {
 	public final Environment environment = testProperties.getEnvironment();
 	public static String requesturl;
 	public CloseableHttpResponse response;
+	public HttpEntity Entity;
 	
 	public CloseableHttpClient httpClient = HttpClients.createDefault();
 	
@@ -53,6 +54,7 @@ public class ServerApiTest {
 				response = httpClient.execute(postRequest);
 			}
 		}
+		response.close();
 	}
 	
 	private void printRequestURL(){
@@ -78,5 +80,9 @@ public class ServerApiTest {
 	public void generateRequestUrl(RequestDomain requestDomain,String parameterString){
 		requesturl = generateRequestUrl(requestDomain) + parameterString;
 		printRequestURL();
+	}
+	
+	public HttpEntity generatePostEntity(){
+		return Entity;
 	}
 }

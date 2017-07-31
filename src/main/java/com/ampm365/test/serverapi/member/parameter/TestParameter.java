@@ -1,7 +1,6 @@
 package com.ampm365.test.serverapi.member.parameter;
 
-import com.ampm365.test.serverapi.enumerations.Enumerations.IdCard;
-import com.ampm365.test.serverapi.utility.TestDataGenerator;
+import java.util.Map;
 
 public class TestParameter {
 	
@@ -29,17 +28,6 @@ public class TestParameter {
 	 * All Parameter Is Invalid
 	 */
 	public TestParameter(){
-//		this.idCard = TestDataGenerator.generatorIdCard(IdCard.INVALID);
-//		this.loginPwd = "";
-//		this.mobile = TestDataGenerator.generatorMobile();
-//		this.name = "Tester";
-//		this.promoterId = "10000";
-//		this.promotionCde = "";
-//		this.pubPltmId = "pubPltmId";
-//		this.chanlCde = "Chanl002";
-//		this.regIp = "127.0.0.1";
-//		this.salesSmsAcptIndc = "1";
-//		this.sex ="1";
 	}
 	
 	public String toString(){
@@ -58,6 +46,11 @@ public class TestParameter {
 		return parameter;
 	}
 	
+	public Map<String,String> toParameterMap(){
+		return MapParameter;
+	}
+	
+	private Map<String,String> MapParameter;
 	private String parameter;
 	private String idCard;//身份证号 
 	private String loginPwd;//登录密码 必填 ;在登录接口中，密码登录时值为：登陆密码 短信登录时值为： 短信验证码 , 密码登录时，密码要RSA加密 然后base64传后台

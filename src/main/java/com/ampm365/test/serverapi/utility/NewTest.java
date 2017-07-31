@@ -1,10 +1,14 @@
 package com.ampm365.test.serverapi.utility;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.ibatis.logging.log4j.Log4jImpl;
 import org.apache.velocity.runtime.directive.Foreach;
 import org.testng.annotations.Test;
@@ -27,18 +31,20 @@ public class NewTest extends ServerApiTest {
 //	  memberinfo1.setMobile("13699999999");
 //	  memberinfo1.setMmb_sts_indc("1");
 //	  memberinfo1.setReg_time(nowTime);
-//	  memberinfo1.setSales_sms_acpt_indc("1");
+//	  memberinfo1.setSales_sms_acpt_indc("1");6
 //	  memberinfo1.setVerson(1);
 //	  memberinfo1.setCreate_date(nowTime);
 //	  memberinfo1.setUpdate_date(nowTime);
 //	  memberinfo1.setDel_flag("0");
 //	  DatabaseUtility.getSqlSession().insert(Constants.INSERT_NEW_MEMBER, memberinfo1);
+	  List<NameValuePair> list = new ArrayList<NameValuePair>();
 	  Map<String, String> map = new HashMap<String, String>();
 	  map.put("1", "1");
 	  map.put("2", "2");
 	  map.put("3", "3");
 	  for(Entry<String, String> item : map.entrySet()){
-		  System.out.println("key" + item.getKey() + "value" + item.getValue());
+		  list.add(new BasicNameValuePair(item.getKey(),item.getValue()));
+		  logger.debug(list.toString());
 	  }
   }
 }

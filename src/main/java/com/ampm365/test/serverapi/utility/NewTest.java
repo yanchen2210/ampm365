@@ -1,5 +1,6 @@
 package com.ampm365.test.serverapi.utility;
 
+import java.rmi.MarshalledObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,16 +8,13 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.alibaba.fastjson.JSONObject;
-import org.apache.http.FormattedHeader;
-import org.apache.http.HeaderElement;
-import org.apache.http.NameValuePair;
-import org.apache.http.ParseException;
+import org.apache.http.*;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import org.apache.ibatis.logging.log4j.Log4jImpl;
 import org.testng.annotations.Test;
 
@@ -54,8 +52,20 @@ public class NewTest extends ServerApiTest {
 	  String requestUrl = "http://test.appapi.quanshishequ.com/api/login";
 	  HttpPost postRequest = new HttpPost(requestUrl);
 	  String jsonString = "{\"platform\":\"1\",\"device\":\"MEIZU-MX3\",\"networkType\":\"4G\",\"smartLoading\":\"1\",\"screen\":\"1920*1080\",\"uuid\":\"862679033583558\",\"currentTime\":\"12345\",\"installTime\":\"12345\",\"channelId\":\"appstore\",\"version\":\"1.0.0\",\"apiVersion\":\"1.0.0\",\"token\":\"\",\"storeId\":\"101\",\"vendorId\":\"1\"}";
-	  Map jsonMap = (Map)JSON.parse(jsonString);
+	  Map<String, String> jsonMap = (Map)JSON.parse(jsonString);
 	  logger.debug(jsonMap.toString());
+	  for(Entry<String, String> item : jsonMap.entrySet()){
+	  	postRequest.addHeader(item.getKey(),item.getValue());
+	  }
+      List<NameValuePair> list = new ArrayList<NameValuePair>();
+      list.add(new BasicNameValuePair("phoneNumber","13220187546"));
+      list.add(new BasicNameValuePair("password","123456"));
+      UrlEncodedFormEntity uefEntity = new UrlEncodedFormEntity(list, "UTF-8");
+      postRequest.setEntity(uefEntity);
+      response = httpClient.execute(postRequest);
+      logger.debug(response.toString());
+      response.close();
+
 
   }
 }

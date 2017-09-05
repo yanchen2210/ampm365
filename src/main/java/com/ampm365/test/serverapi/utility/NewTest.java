@@ -1,22 +1,26 @@
 package com.ampm365.test.serverapi.utility;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.alibaba.fastjson.JSONObject;
+import org.apache.http.FormattedHeader;
+import org.apache.http.HeaderElement;
 import org.apache.http.NameValuePair;
+import org.apache.http.ParseException;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import org.apache.ibatis.logging.log4j.Log4jImpl;
-import org.apache.velocity.runtime.directive.Foreach;
 import org.testng.annotations.Test;
 
 import com.ampm365.test.serverapi.base.ServerApiTest;
-import com.ampm365.test.serverapi.constants.Constants;
-import com.ampm365.test.serverapi.entity.Member;
-import com.ampm365.test.serverapi.enumerations.Enumerations.RequestDomain;
 
 public class NewTest extends ServerApiTest {
 	public Log4jImpl logger = new Log4jImpl(NewTest.class.getName());
@@ -37,14 +41,21 @@ public class NewTest extends ServerApiTest {
 //	  memberinfo1.setUpdate_date(nowTime);
 //	  memberinfo1.setDel_flag("0");
 //	  DatabaseUtility.getSqlSession().insert(Constants.INSERT_NEW_MEMBER, memberinfo1);
-	  List<NameValuePair> list = new ArrayList<NameValuePair>();
-	  Map<String, String> map = new HashMap<String, String>();
-	  map.put("1", "1");
-	  map.put("2", "2");
-	  map.put("3", "3");
-	  for(Entry<String, String> item : map.entrySet()){
-		  list.add(new BasicNameValuePair(item.getKey(),item.getValue()));
-		  logger.debug(list.toString());
-	  }
+//	  List<NameValuePair> list = new ArrayList<NameValuePair>();
+//	  Map<String, String> map = new HashMap<String, String>();
+//	  map.put("1", "1");
+//	  map.put("2", "2");
+//	  map.put("3", "3");
+//	  for(Entry<String, String> item : map.entrySet()){
+//		  list.add(new BasicNameValuePair(item.getKey(),item.getValue()));
+//		  logger.debug(list.toString());
+//	  }
+	  CloseableHttpClient httpClient = HttpClients.createDefault();
+	  String requestUrl = "http://test.appapi.quanshishequ.com/api/login";
+	  HttpPost postRequest = new HttpPost(requestUrl);
+	  String jsonString = "{\"platform\":\"1\",\"device\":\"MEIZU-MX3\",\"networkType\":\"4G\",\"smartLoading\":\"1\",\"screen\":\"1920*1080\",\"uuid\":\"862679033583558\",\"currentTime\":\"12345\",\"installTime\":\"12345\",\"channelId\":\"appstore\",\"version\":\"1.0.0\",\"apiVersion\":\"1.0.0\",\"token\":\"\",\"storeId\":\"101\",\"vendorId\":\"1\"}";
+	  Map jsonMap = (Map)JSON.parse(jsonString);
+	  logger.debug(jsonMap.toString());
+
   }
 }

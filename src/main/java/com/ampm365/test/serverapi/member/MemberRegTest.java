@@ -13,7 +13,7 @@ import com.ampm365.test.serverapi.member.parameterparser.MemberRegTestParameterP
 public class MemberRegTest extends ServerApiTest{
 
 	private static Log4jImpl logger = new Log4jImpl(MemberRegTest.class.getName());
-	boolean isAuto = false;
+//	boolean isAuto = false;
 	private MemberRegTestParameter memberRegTestParameter;
 	private MemberRegTestParameterParser memberRegTestParameterParser = new MemberRegTestParameterParser();
 	
@@ -24,8 +24,8 @@ public class MemberRegTest extends ServerApiTest{
 		Assert.assertNotNull(memberRegTestParameter, "memberRegTestParameter is NULL");
 		logger.debug("NormalMemberRegTest Parameter is :" + memberRegTestParameter.toString());
 		generateRequestUrl(RequestDomain.member, memberRegTestParameter.toParameterString());
-		//sendPostRequest(getHttpEntityFromParamter(memberRegTestParameter));
-	  
+//		sendPostRequest(getHttpEntityFromParameter(memberRegTestParameter));
+
   }
 
 	

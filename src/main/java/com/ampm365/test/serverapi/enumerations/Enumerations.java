@@ -17,10 +17,22 @@ public class Enumerations {
 		VALID,FULL,CUSTOM
 	}
 	
-	public static enum RequestDomain{
-		member,weixin;
+	public static enum RequestDomain {
+		member,weixin
 	}
-	
+
+	public enum HttpResponseCode{
+		Success(200),NOTFOUND(404),FAILURE(500);
+		private int code;
+
+		HttpResponseCode(int temp) {
+			code = temp;
+		}
+
+		public int value() {
+			return this.code;
+		}
+	}
 	
 	//MemberRelations
 	public static enum IdCard{

@@ -2,6 +2,7 @@ package com.ampm365.test.serverapi.base;
 
 import java.io.IOException;
 
+import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -20,7 +21,7 @@ public class ServerApiTest {
 	
 	private static TestProperties testProperties = PropertyHandler.getProperties();
 	private static String cookie;
-	
+
 	public Log4jImpl logger = new Log4jImpl(ServerApiTest.class.getName());
 	public final Environment environment = testProperties.getEnvironment();
 	public static String requesturl;
@@ -43,7 +44,7 @@ public class ServerApiTest {
 		sendPostRequest(httpEntity, cookie);
 	}
 	
-	public void sendPostRequest(HttpEntity httpEntity,String cookie) throws ClientProtocolException, IOException{
+	public void sendPostRequest(HttpEntity httpEntity, String cookie) throws ClientProtocolException, IOException{
 		if(httpClient != null){
 			HttpPost postRequest = new HttpPost(requesturl);
 			if(cookie != null){

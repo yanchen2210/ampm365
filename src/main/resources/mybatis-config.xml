@@ -18,5 +18,6 @@
 
 	<mappers>
 		<mapper resource="DatabaseMapper/mmb_info.xml"/>
+		<mapper resource="DatabaseMapper/mmb_insert.xml"/>
 	</mappers>
 </configuration>

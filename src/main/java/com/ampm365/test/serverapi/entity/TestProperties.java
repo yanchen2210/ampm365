@@ -94,6 +94,4 @@ public class TestProperties {
 	public void setDatabasePassword(String databasePassword) {
 		this.databasePassword = databasePassword;
 	}
-	
-	
 }

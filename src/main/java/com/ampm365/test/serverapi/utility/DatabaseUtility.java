@@ -40,7 +40,7 @@ public class DatabaseUtility {
 			}catch (SQLException e) {
 				logger.debug("SQL Exception is Found");
 				e.printStackTrace();
-			}	
+			}
 		}
 		return connection;
 	}

@@ -1,26 +1,22 @@
 package com.ampm365.test.serverapi.utility;
 
 import com.ampm365.test.serverapi.base.ServerApiTest;
+import com.ampm365.test.serverapi.entity.TestProperties;
+import com.ampm365.test.serverapi.entity.UserInfo;
+import org.apache.ibatis.logging.log4j.Log4jImpl;
+import org.apache.ibatis.session.SqlSession;
 import org.testng.annotations.Test;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 
 public class InsertNewUser extends ServerApiTest{
+    public Log4jImpl logger = new Log4jImpl(InsertNewUser.class.getName());
+    private static TestProperties testProperties = PropertyHandler.getProperties();
     @Test
-    public void WriteInTxt() throws Exception{
-        File WriteFile = new File("D:\\output.txt");
-        WriteFile.createNewFile();
-        BufferedWriter out = new BufferedWriter(new FileWriter(WriteFile));
-        int num = 1000000;
-        for(int i = 1;i<= 999999;i++){
-            num = num + 1;
-            out.write(String.valueOf(num)+"\r\n");
-        }
-        out.flush();
-        out.close();
-    }
+    public void InsertSql(){
+        //UserInfo userinfo = DatabaseUtility.getSqlSession().selectOne("DatabaseMapper.user_info.getUserInfoByMobile","13699281256");
+        DatabaseUtility.getSqlSession().insert("DatabaseMapper.user_info.insertNewMember");
 
+
+    }
 
 }

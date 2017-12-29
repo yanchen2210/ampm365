@@ -154,6 +154,8 @@ public class NewTest extends ServerApiTest {
           file.flush();
           file.close();
           response.close();
+          ArrayList test = new ArrayList();
+          test.get(1);
       }
 
 

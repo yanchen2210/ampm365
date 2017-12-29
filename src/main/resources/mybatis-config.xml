@@ -17,7 +17,7 @@
 
 
 	<mappers>
-		<mapper resource="DatabaseMapper/mmb_info.xml"/>
-		<mapper resource="DatabaseMapper/mmb_insert.xml"/>
+		<mapper resource="DatabaseMapper/user_info.xml"/>
+		<!--mapper resource="DatabaseMapper/user_insert.xml"/-->
 	</mappers>
 </configuration>

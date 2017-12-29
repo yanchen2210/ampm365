@@ -52,6 +52,9 @@ public class HttpUtility {
         return Request;
     }
 
+
+
+
 //    String jsonString = "{\n" + "\"platform\": \"1\",\n" + "\"device\": \"MEIZU-MX3\",\n" + "\"networkType\": \"4G\",\n" + "\"smartLoading\": \"1\",\n" + "\"screen\": \"1920*1080\",\n" + "\"uuid\": \"sadfsadfasdf\",\n" + "\"currentTime\": \"12345\",\n" + "\"installTime\": \"12345\",\n" + "\"channelId\": \"appstore\",\n" + "\"version\": \"1.0.0\",\n" + "\"apiVersion\": \"1.0.0\",\n" + "\"storeId\": \"10001000100\",\n" + "\"vendorId\": \"10001\"\n" + "}";
 //    Map<String, String> jsonMap = (Map) JSON.parse(jsonString);
 ////	  logger.debug(jsonMap.toString());

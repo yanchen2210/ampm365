@@ -4,39 +4,38 @@ import java.util.Date;
 
 public class UserInfo {
     private int id;
-    private long user_code;
-    private int growth_value;
-    private int level_code;
+    private long userCode;
+    private int growthValue;
+    private int levelCode;
     private String phone;
-    private String reg_app_id;
-    private Date reg_time;
-    private int score_value;
-    private String nick_name;
+    private String regAppId;
+    private Date regTime;
+    private int scoreValue;
+    private String nickName;
     private String avatar;
     private String birthday;
-    private int promotion_code;
-    private String promotion_name;
-    private long promoter_code;
-    private int promotion_sms;
-    private String frequent_store;
+    private int promotionCode;
+    private String promotionName;
+    private long promoterCode;
+    private int promotionSms;
+    private String frequentStore;
     private String name;
     private int sex;
-    private String id_card;
+    private String idCard;
     private String province;
     private String city;
     private String area;
     private String address;
     private String education;
-    private int marital_status;
-    private String login_pwd;
+    private int maritalStatus;
+    private String loginPwd;
     private int status;
-    private int sys_version;
-    private Date create_time;
-    private Date update_time;
-    private String create_user;
-    private String update_user;
+    private int sysVersion;
+    private Date createTime;
+    private Date updateTime;
+    private String createUser;
+    private String updateUser;
     private int deleted;
-
 
     public int getId() {
         return id;
@@ -46,28 +45,28 @@ public class UserInfo {
         this.id = id;
     }
 
-    public long getUser_code() {
-        return user_code;
+    public long getUserCode() {
+        return userCode;
     }
 
-    public void setUser_code(long user_code) {
-        this.user_code = user_code;
+    public void setUserCode(long userCode) {
+        this.userCode = userCode;
     }
 
-    public int getGrowth_value() {
-        return growth_value;
+    public int getGrowthValue() {
+        return growthValue;
     }
 
-    public void setGrowth_value(int growth_value) {
-        this.growth_value = growth_value;
+    public void setGrowthValue(int growthValue) {
+        this.growthValue = growthValue;
     }
 
-    public int getLevel_code() {
-        return level_code;
+    public int getLevelCode() {
+        return levelCode;
     }
 
-    public void setLevel_code(int level_code) {
-        this.level_code = level_code;
+    public void setLevelCode(int levelCode) {
+        this.levelCode = levelCode;
     }
 
     public String getPhone() {
@@ -78,36 +77,36 @@ public class UserInfo {
         this.phone = phone;
     }
 
-    public String getReg_app_id() {
-        return reg_app_id;
+    public String getRegAppId() {
+        return regAppId;
     }
 
-    public void setReg_app_id(String reg_app_id) {
-        this.reg_app_id = reg_app_id;
+    public void setRegAppId(String regAppId) {
+        this.regAppId = regAppId;
     }
 
-    public Date getReg_time() {
-        return reg_time;
+    public Date getRegTime() {
+        return regTime;
     }
 
-    public void setReg_time(Date reg_time) {
-        this.reg_time = reg_time;
+    public void setRegTime(Date regTime) {
+        this.regTime = regTime;
     }
 
-    public int getScore_value() {
-        return score_value;
+    public int getScoreValue() {
+        return scoreValue;
     }
 
-    public void setScore_value(int score_value) {
-        this.score_value = score_value;
+    public void setScoreValue(int scoreValue) {
+        this.scoreValue = scoreValue;
     }
 
-    public String getNick_name() {
-        return nick_name;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNick_name(String nick_name) {
-        this.nick_name = nick_name;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getAvatar() {
@@ -126,44 +125,44 @@ public class UserInfo {
         this.birthday = birthday;
     }
 
-    public int getPromotion_code() {
-        return promotion_code;
+    public int getPromotionCode() {
+        return promotionCode;
     }
 
-    public void setPromotion_code(int promotion_code) {
-        this.promotion_code = promotion_code;
+    public void setPromotionCode(int promotionCode) {
+        this.promotionCode = promotionCode;
     }
 
-    public String getPromotion_name() {
-        return promotion_name;
+    public String getPromotionName() {
+        return promotionName;
     }
 
-    public void setPromotion_name(String promotion_name) {
-        this.promotion_name = promotion_name;
+    public void setPromotionName(String promotionName) {
+        this.promotionName = promotionName;
     }
 
-    public long getPromoter_code() {
-        return promoter_code;
+    public long getPromoterCode() {
+        return promoterCode;
     }
 
-    public void setPromoter_code(long promoter_code) {
-        this.promoter_code = promoter_code;
+    public void setPromoterCode(long promoterCode) {
+        this.promoterCode = promoterCode;
     }
 
-    public int getPromotion_sms() {
-        return promotion_sms;
+    public int getPromotionSms() {
+        return promotionSms;
     }
 
-    public void setPromotion_sms(int promotion_sms) {
-        this.promotion_sms = promotion_sms;
+    public void setPromotionSms(int promotionSms) {
+        this.promotionSms = promotionSms;
     }
 
-    public String getFrequent_store() {
-        return frequent_store;
+    public String getFrequentStore() {
+        return frequentStore;
     }
 
-    public void setFrequent_store(String frequent_store) {
-        this.frequent_store = frequent_store;
+    public void setFrequentStore(String frequentStore) {
+        this.frequentStore = frequentStore;
     }
 
     public String getName() {
@@ -182,12 +181,12 @@ public class UserInfo {
         this.sex = sex;
     }
 
-    public String getId_card() {
-        return id_card;
+    public String getIdCard() {
+        return idCard;
     }
 
-    public void setId_card(String id_card) {
-        this.id_card = id_card;
+    public void setIdCard(String idCard) {
+        this.idCard = idCard;
     }
 
     public String getProvince() {
@@ -230,20 +229,20 @@ public class UserInfo {
         this.education = education;
     }
 
-    public int getMarital_status() {
-        return marital_status;
+    public int getMaritalStatus() {
+        return maritalStatus;
     }
 
-    public void setMarital_status(int marital_status) {
-        this.marital_status = marital_status;
+    public void setMaritalStatus(int maritalStatus) {
+        this.maritalStatus = maritalStatus;
     }
 
-    public String getLogin_pwd() {
-        return login_pwd;
+    public String getLoginPwd() {
+        return loginPwd;
     }
 
-    public void setLogin_pwd(String login_pwd) {
-        this.login_pwd = login_pwd;
+    public void setLoginPwd(String loginPwd) {
+        this.loginPwd = loginPwd;
     }
 
     public int getStatus() {
@@ -254,44 +253,44 @@ public class UserInfo {
         this.status = status;
     }
 
-    public int getSys_version() {
-        return sys_version;
+    public int getSysVersion() {
+        return sysVersion;
     }
 
-    public void setSys_version(int sys_version) {
-        this.sys_version = sys_version;
+    public void setSysVersion(int sysVersion) {
+        this.sysVersion = sysVersion;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Date getUpdate_time() {
-        return update_time;
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
-    public void setUpdate_time(Date update_time) {
-        this.update_time = update_time;
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 
-    public String getCreate_user() {
-        return create_user;
+    public String getCreateUser() {
+        return createUser;
     }
 
-    public void setCreate_user(String create_user) {
-        this.create_user = create_user;
+    public void setCreateUser(String createUser) {
+        this.createUser = createUser;
     }
 
-    public String getUpdate_user() {
-        return update_user;
+    public String getUpdateUser() {
+        return updateUser;
     }
 
-    public void setUpdate_user(String update_user) {
-        this.update_user = update_user;
+    public void setUpdateUser(String updateUser) {
+        this.updateUser = updateUser;
     }
 
     public int getDeleted() {
@@ -300,5 +299,44 @@ public class UserInfo {
 
     public void setDeleted(int deleted) {
         this.deleted = deleted;
+    }
+
+    @Override
+    public String toString() {
+        return "UserInfo{" +
+                "id=" + id +
+                ", userCode=" + userCode +
+                ", growthValue=" + growthValue +
+                ", levelCode=" + levelCode +
+                ", phone='" + phone + '\'' +
+                ", regAppId='" + regAppId + '\'' +
+                ", regTime=" + regTime +
+                ", scoreValue=" + scoreValue +
+                ", nickName='" + nickName + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", promotionCode=" + promotionCode +
+                ", promotionName='" + promotionName + '\'' +
+                ", promoterCode=" + promoterCode +
+                ", promotionSms=" + promotionSms +
+                ", frequentStore='" + frequentStore + '\'' +
+                ", name='" + name + '\'' +
+                ", sex=" + sex +
+                ", idCard='" + idCard + '\'' +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", area='" + area + '\'' +
+                ", address='" + address + '\'' +
+                ", education='" + education + '\'' +
+                ", maritalStatus=" + maritalStatus +
+                ", loginPwd='" + loginPwd + '\'' +
+                ", status=" + status +
+                ", sysVersion=" + sysVersion +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", createUser='" + createUser + '\'' +
+                ", updateUser='" + updateUser + '\'' +
+                ", deleted=" + deleted +
+                '}';
     }
 }

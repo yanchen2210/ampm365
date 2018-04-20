@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="com.ampm365.test.serverapi" />
+        <module name="serverapi" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="com.ampm365.test.serverapi" target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="serverapi" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

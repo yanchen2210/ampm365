@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import com.ampm365.test.serverapi.base.ServerApiTest;
 import com.ampm365.test.serverapi.enumerations.Enumerations.ParameterType;
 import com.ampm365.test.serverapi.enumerations.Enumerations.RequestDomain;
-import com.ampm365.test.serverapi.member.parameter.MemberRegTestParameter;
 import com.ampm365.test.serverapi.member.parameterparser.MemberRegTestParameterParser;
 
 public class MemberRegTest extends ServerApiTest{

@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import com.ampm365.test.serverapi.base.ServerApiTest;
 import com.ampm365.test.serverapi.enumerations.Enumerations.RequestDomain;
 import com.ampm365.test.serverapi.enumerations.Enumerations.GetMemberInfo;
-import com.ampm365.test.serverapi.member.parameter.GetInfoTestParameter;
 
 public class GetInfoByAccountTest extends ServerApiTest{
 	private Log4jImpl logger = new Log4jImpl(GetInfoByAccountTest.class.getName());

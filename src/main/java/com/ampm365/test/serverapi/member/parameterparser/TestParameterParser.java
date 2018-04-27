@@ -1,7 +1,6 @@
 package com.ampm365.test.serverapi.member.parameterparser;
 
 import com.ampm365.test.serverapi.enumerations.Enumerations.ParameterType;
-import com.ampm365.test.serverapi.member.parameter.TestParameter;
 
 public class TestParameterParser {
 	TestParameter testParameter;

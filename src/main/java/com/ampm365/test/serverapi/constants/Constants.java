@@ -15,15 +15,15 @@ public class Constants {
 	
 	//HTTP Request URL
 	//会员相关的URL
-	private static final String MemberBaseUrl = "/mms-customer/";
-	public static final String MemberReg = MemberBaseUrl + "member/register?";
-	public static final String UpdateInfo = MemberBaseUrl + "member/update?";
-	public static final String ChangeGrowthVal = MemberBaseUrl + "member/change?";
-	public static final String FindMemberInfoByMobile = MemberBaseUrl + "member/{mobile}/1";
-	public static final String FindMemberLvChangeByMobile = MemberBaseUrl + "member/{mobile}/2";
-	public static final String FindMemberGrowChangeByMobile = MemberBaseUrl + "member/{mobile}/3";
-	public static final String MemberLogin = MemberBaseUrl + "account/login?";
-	public static final String ModifyPwd = MemberBaseUrl + "account/update/1";
-	public static final String ResetPwd = MemberBaseUrl + "account/update/2";
-	public static final String SendCaptcha = MemberBaseUrl + "account/sendCaptcha?";
+	private static final String MemberBaseUrl = "/api/";
+	public static final String VendorInfo = MemberBaseUrl + "api/vendor/info?";
+	public static final String UserInfo = MemberBaseUrl + "user/info?";
+	public static final String UserLevel = MemberBaseUrl + "user/level?";
+	public static final String TradePush = MemberBaseUrl + "user/trade/push?";
+	public static final String TradeReverse = MemberBaseUrl + "user/trade/reverse?";
+	public static final String ScorePay = MemberBaseUrl + "user/score/pay?";
+	public static final String ScoreCancle = MemberBaseUrl + "user/score/cancel?";
+	public static final String ScoreRefund = MemberBaseUrl + "user/score/refund?";
+	public static final String ScorePaymentQuery = MemberBaseUrl + "user/score/payment/query?";
+	public static final String ScoreRatio = MemberBaseUrl + "user/score/ratio?";
 }

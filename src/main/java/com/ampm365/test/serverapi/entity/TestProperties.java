@@ -7,7 +7,7 @@ public class TestProperties {
 	//test weixin20 environment
 	private String weixin_hostName;
 	private String weixin_port;
-	//test member environment
+	//test Member environment
 	private String member_hostname;
 	private String member_port;
 	private Environment environment = Environment.Test;

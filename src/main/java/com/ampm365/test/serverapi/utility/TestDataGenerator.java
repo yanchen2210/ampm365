@@ -40,6 +40,12 @@ public class TestDataGenerator {
 		String Mobile = mobilePrefix[position] + generatorNum(8);
 		return Mobile;
 	}
+
+	public static String generatorTimeStamp(){
+		long time = System.currentTimeMillis();
+		String timeStamp = String.valueOf(time / 1000);
+		return timeStamp;
+	}
 	
 	
 	public static String generatorIdCard(IdCard idcard){

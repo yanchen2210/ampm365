@@ -18,66 +18,68 @@ import com.ampm365.test.serverapi.constants.Constants;
 import com.ampm365.test.serverapi.enumerations.Enumerations.*;
 
 public class ServerApiTest {
-	
+
 	private static TestProperties testProperties = PropertyHandler.getProperties();
 	private static String cookie;
 
 	public Log4jImpl logger = new Log4jImpl(ServerApiTest.class.getName());
-	public final Environment environment = testProperties.getEnvironment();
 	public static String requesturl;
 	public CloseableHttpResponse response;
 	public HttpEntity Entity;
-	
+
 	public CloseableHttpClient httpClient = HttpClients.createDefault();
-	
-	public void sendGetRequest() throws ClientProtocolException, IOException{
-		if (httpClient !=null){
+
+	public void sendGetRequest() throws ClientProtocolException, IOException {
+		if (httpClient != null) {
 			HttpGet getRequest = new HttpGet(requesturl);
-			if (getRequest != null){
+			if (getRequest != null) {
 				response = httpClient.execute(getRequest);
 			}
 		}
 		response.close();
 	}
-	
-	public void sendPostRequest(HttpEntity httpEntity) throws ClientProtocolException, IOException{
+
+	public void sendPostRequest(HttpEntity httpEntity) throws ClientProtocolException, IOException {
 		sendPostRequest(httpEntity, cookie);
 	}
-	
-	public void sendPostRequest(HttpEntity httpEntity, String cookie) throws ClientProtocolException, IOException{
-		if(httpClient != null){
+
+	public void sendPostRequest(HttpEntity httpEntity, String cookie) throws ClientProtocolException, IOException {
+		if (httpClient != null) {
 			HttpPost postRequest = new HttpPost(requesturl);
-			if(cookie != null){
+			if (cookie != null) {
 				postRequest.setHeader("Cookie", cookie);
 			}
-			if(postRequest != null){
+			if (postRequest != null) {
 				postRequest.setEntity(httpEntity);
 				response = httpClient.execute(postRequest);
 			}
 		}
 		response.close();
 	}
-	
-	private void printRequestURL(){
-		logger.debug("Request URL is :"+  requesturl);
+
+	private void printRequestURL() {
+		logger.debug("Request URL is :" + requesturl);
 	}
-	
-	public static String generateRequestUrl(RequestDomain requestDomain){
+
+
+	public static String generateRequestUrl(RequestDomain requestDomain) {
 		String domain;
-		switch (requestDomain){
-		case member:
-			domain = testProperties.getMember_hostname() + ":" + testProperties.getMember_port();
-			break;
-		case weixin:
-			domain = testProperties.getWeixin_hostName() + ":" + testProperties.getWeixin_port();
-			break;
-		default:
-			domain = "";
-			break;
-		}	
-		return Constants.HTTPPRIFIX + domain;		
+		switch (requestDomain) {
+			case ourHours30:
+				domain = testProperties.getOurHours30_url() + ":" + testProperties.getOurHours30_port();
+				break;
+			default:
+				domain = "";
+				break;
+		}
+		return Constants.HTTPPRIFIX + domain;
 	}
-	
+
+	/**
+	 * Generate request url
+	 * @param requestDomain
+	 * @param parameterString
+	 */
 	public void generateRequestUrl(RequestDomain requestDomain,String parameterString){
 		requesturl = generateRequestUrl(requestDomain) + parameterString;
 		printRequestURL();

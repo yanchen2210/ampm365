@@ -1,4 +1,4 @@
-package com.ampm365.test.serverapi.member;
+package com.ampm365.test.serverapi.Member;
 
 import org.testng.annotations.Test;
 

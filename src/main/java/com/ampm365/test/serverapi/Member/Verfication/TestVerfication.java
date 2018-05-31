@@ -1,4 +1,4 @@
-package com.ampm365.test.serverapi.member.Verfication;
+package com.ampm365.test.serverapi.Member.Verfication;
 
 import com.ampm365.test.serverapi.enumerations.Enumerations;
 import org.apache.http.client.methods.CloseableHttpResponse;

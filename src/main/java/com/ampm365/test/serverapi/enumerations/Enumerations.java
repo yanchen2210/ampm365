@@ -1,24 +1,12 @@
 package com.ampm365.test.serverapi.enumerations;
 
 public class Enumerations {
-	public static enum Environment{
-		Test(0),Online(1);
-		private Integer environment;
-		Environment(Integer environment) {
-			this.environment = environment;
-		}
-		
-		public Integer value() {
-			return environment;
-		}		
-	}
-	
 	public static enum ParameterType {
 		VALID,FULL,CUSTOM
 	}
 	
 	public static enum RequestDomain {
-		member,weixin
+		ourHours30
 	}
 
 	public enum HttpResponseCode{

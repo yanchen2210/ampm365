@@ -1,9 +1,8 @@
-package com.ampm365.test.serverapi.entity;
+package com.ampm365.test.serverapi.utility;
 
+import com.ampm365.test.serverapi.entity.SignRequest;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
-
-
 import java.util.*;
 
 /**
@@ -50,26 +49,26 @@ public class SignUtil {
      * @param signRequest
      * @return
      */
-    public static boolean verifySign(String appId, String secret, SignRequest signRequest) {
-        Map<String,String> params = new TreeMap<>();
-        params.put("appId", appId);
-        params.put("timestamp", signRequest.getTimestamp().toString());
-        if(signRequest.getPlatform() != null) {
-            params.put("platform", signRequest.getPlatform().toString());
-        }
-        Map<String,Object> appParams = signRequest.getAppParams();
-        for(String key : appParams.keySet()) {
-            if(appParams.get(key) == null) {
-                continue;
-            }
-            params.put(key, appParams.get(key).toString());
-        }
-        String sign = sign(secret, signRequest.getCmd(), params);
-        if(!signRequest.getSign().equals(sign)) {
-            return false;
-        }
-        return true;
-    }
+//    public static boolean verifySign(String appId, String secret, SignRequest signRequest) {
+//        Map<String,String> params = new TreeMap<>();
+//        params.put("appId", appId);
+//        params.put("timestamp", signRequest.getTimestamp().toString());
+//        if(signRequest.getPlatform() != null) {
+//            params.put("platform", signRequest.getPlatform().toString());
+//        }
+//        Map<String,Object> appParams = signRequest.getAppParams();
+//        for(String key : appParams.keySet()) {
+//            if(appParams.get(key) == null) {
+//                continue;
+//            }
+//            params.put(key, appParams.get(key).toString());
+//        }
+//        String sign = sign(secret, signRequest.getCmd(), params);
+//        if(!signRequest.getSign().equals(sign)) {
+//            return false;
+//        }
+//        return true;
+//    }
 
     public static String sign(String appSecret, String appPath, Map<String,String> params){
         List<String> list = new ArrayList<>();

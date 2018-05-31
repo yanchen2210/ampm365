@@ -3,94 +3,63 @@ package com.ampm365.test.serverapi.entity;
 import com.ampm365.test.serverapi.enumerations.Enumerations.Environment;;
 
 public class TestProperties {
-	
-	//test weixin20 environment
-	private String weixin_hostName;
-	private String weixin_port;
-	//test Member environment
-	private String member_hostname;
-	private String member_port;
-	private Environment environment = Environment.Test;
+
+	//get environment
+
+	//test 3.0 environment
+	private String OurHours30_url;
+	private String OurHours30_port;
+
 	//DB infomation
 	private String databaseHostname;
 	private String databasePort;
 	private String databaseUsername;
 	private String databasePassword;
-	
-	//Redis environment
-	private String redisHostname;
-	private String redisPassword;
-	private int redisPort;
-	
-	public String getRedisHostname() {
-		return redisHostname;
+
+	public String getOurHours30_url() {
+		return OurHours30_url;
 	}
-	public void setRedisHostname(String redisHostname) {
-		this.redisHostname = redisHostname;
+
+	public void setOurHours30_url(String ourHours30_url) {
+		OurHours30_url = ourHours30_url;
 	}
-	public String getRedisPassword() {
-		return redisPassword;
+
+	public String getOurHours30_port() {
+		return OurHours30_port;
 	}
-	public void setRedisPassword(String redisPassword) {
-		this.redisPassword = redisPassword;
+
+	public void setOurHours30_port(String ourHours30_port) {
+		OurHours30_port = ourHours30_port;
 	}
-	public int getRedisPort() {
-		return redisPort;
-	}
-	public void setRedisPort(int redisPort) {
-		this.redisPort = redisPort;
-	}
-	public String getWeixin_hostName() {
-		return weixin_hostName;
-	}
-	public void setWeixin_hostName(String weinxin_hostName) {
-		this.weixin_hostName = weinxin_hostName;
-	}
-	public String getWeixin_port() {
-		return weixin_port;
-	}
-	public void setWeixin_port(String weixin_port) {
-		this.weixin_port = weixin_port;
-	}
-	public String getMember_hostname() {
-		return member_hostname;
-	}
-	public void setMember_hostname(String member_hostname) {
-		this.member_hostname = member_hostname;
-	}
-	public String getMember_port() {
-		return member_port;
-	}
-	public void setMember_port(String member_port) {
-		this.member_port = member_port;
-	}
-	public Environment getEnvironment() {
-		return environment;
-	}
-	public void setEnvironment(Environment environment) {
-		this.environment = environment;
-	}
+
 	public String getDatabaseHostname() {
 		return databaseHostname;
 	}
+
 	public void setDatabaseHostname(String databaseHostname) {
 		this.databaseHostname = databaseHostname;
 	}
+
 	public String getDatabasePort() {
 		return databasePort;
 	}
+
 	public void setDatabasePort(String databasePort) {
 		this.databasePort = databasePort;
 	}
+
 	public String getDatabaseUsername() {
 		return databaseUsername;
 	}
+
 	public void setDatabaseUsername(String databaseUsername) {
 		this.databaseUsername = databaseUsername;
 	}
+
 	public String getDatabasePassword() {
 		return databasePassword;
 	}
+
 	public void setDatabasePassword(String databasePassword) {
 		this.databasePassword = databasePassword;
 	}

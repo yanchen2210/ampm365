@@ -13,7 +13,7 @@ public final class PropertyHandler {
 	
 	private static Log4jImpl logger = new Log4jImpl(PropertyHandler.class.getName());
 	private static TestProperties testProperties = null;
-	
+
 	public static TestProperties getProperties(){
 		logger.debug("Start set the Environment from property file");
 		if(testProperties == null){
@@ -28,7 +28,7 @@ public final class PropertyHandler {
 			}
 			setDomians(properties, testProperties.getEnvironment());
 			setDatbaseProperties(properties);
-			setRedisProperties(properties);
+			//setRedisProperties(properties);
 		}
 		return testProperties;
 	}
@@ -40,12 +40,12 @@ public final class PropertyHandler {
 		testProperties.setDatabaseUsername(properties.getProperty("databaseUsername"));
 		testProperties.setDatabasePassword(properties.getProperty("databasePassword"));
 	}
- 	
- 	private static void setRedisProperties(Properties properties){
- 		testProperties.setRedisHostname(properties.getProperty("redis_Hostname"));
- 		testProperties.setRedisPassword(properties.getProperty("redis_Password"));
- 		testProperties.setRedisPort(Integer.parseInt(properties.getProperty("redis_Port")));
- 	}
+
+// 	private static void setRedisProperties(Properties properties){
+// 		testProperties.setRedisHostname(properties.getProperty("redis_Hostname"));
+// 		testProperties.setRedisPassword(properties.getProperty("redis_Password"));
+// 		testProperties.setRedisPort(Integer.parseInt(properties.getProperty("redis_Port")));
+// 	}
 	
 	private static InputStream getPropertiesFileInputStream(Environment environment){
 		InputStream inputStream = null;
@@ -72,27 +72,14 @@ public final class PropertyHandler {
 		}
 		return env;
 	}
-	
+
 	private static void setDomians(Properties properties, Environment environment) {
-		String weixin_hostName;
-		String weixin_port;
-		String member_hostName;
-		String member_port;
-		if (environment == Environment.Online) {
-			weixin_hostName = properties.getProperty("weixin_hostname");
-			weixin_port = properties.getProperty("weixin_port");
-			member_hostName = properties.getProperty("member_hostname");
-			member_port = properties.getProperty("weixin_port");
+		String OurHours30_url;
+		String OurHours30_port;
+		if (environment == Environment.Test) {
+			OurHours30_url = properties.getProperty("OurHours30_url");
+			OurHours30_port = properties.getProperty("OurHours30_port");
 		}
-		else {
-			weixin_hostName = properties.getProperty("weixin_hostname");
-			weixin_port = properties.getProperty("weixin_port");
-			member_hostName = properties.getProperty("member_hostname");
-			member_port = properties.getProperty("weixin_port");
-		}
-		testProperties.setWeixin_hostName(weixin_hostName);
-		testProperties.setWeixin_port(weixin_port);
-		testProperties.setMember_hostname(member_hostName);
-		testProperties.setMember_port(member_port);
+
 	}
 }

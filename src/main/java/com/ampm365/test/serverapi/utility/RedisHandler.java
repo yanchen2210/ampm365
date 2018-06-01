@@ -18,31 +18,31 @@ public class RedisHandler {
 //		jedisPool.destroy();
 //		return RedisClient;
 //	}
-	private static Jedis getRedisConnect(){
-		RedisClient = new Jedis(PropertyHandler.getProperties().getRedisHostname(),PropertyHandler.getProperties().getRedisPort());
-		RedisClient.auth(PropertyHandler.getProperties().getRedisPassword());
-		return RedisClient;
-	}
+//	private static Jedis getRedisConnect(){
+//		RedisClient = new Jedis(PropertyHandler.getProperties().getRedisHostname(),PropertyHandler.getProperties().getRedisPort());
+//		RedisClient.auth(PropertyHandler.getProperties().getRedisPassword());
+//		return RedisClient;
+//	}
 	
-	private static void closeRedisConnect(){
-		RedisClient.close();
-		if(RedisClient.isConnected()){
-			logger.debug("RedisClient Closed Exception");
-		}		
-	}
-	
-	public static String getVerificationCode(String mobile){
-		String VerificationCode = null;
-		getRedisConnect();
-		String RedisVerificationString = RedisClient.get(mobile);
-		if(getRedisConnect()!= null){
-			if(RedisVerificationString != null && RedisVerificationString != ""){
-				VerificationCode = RedisVerificationString.substring(7, 13);
-			}else{
-				logger.debug("VerificationCode is NULL");
-			}	
-		}
-		closeRedisConnect();
-		return VerificationCode;
-	}
+//	private static void closeRedisConnect(){
+//		RedisClient.close();
+//		if(RedisClient.isConnected()){
+//			logger.debug("RedisClient Closed Exception");
+//		}
+//	}
+//
+//	public static String getVerificationCode(String mobile){
+//		String VerificationCode = null;
+//		getRedisConnect();
+//		String RedisVerificationString = RedisClient.get(mobile);
+//		if(getRedisConnect()!= null){
+//			if(RedisVerificationString != null && RedisVerificationString != ""){
+//				VerificationCode = RedisVerificationString.substring(7, 13);
+//			}else{
+//				logger.debug("VerificationCode is NULL");
+//			}
+//		}
+//		closeRedisConnect();
+//		return VerificationCode;
+//	}
 }

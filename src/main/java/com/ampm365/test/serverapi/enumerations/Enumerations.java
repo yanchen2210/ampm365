@@ -1,6 +1,20 @@
 package com.ampm365.test.serverapi.enumerations;
 
+import java.util.Enumeration;
+
 public class Enumerations {
+	public static enum Environment {
+		Test(0),Pre(1),Online(2);
+		private Integer environment;
+
+		Environment(Integer environment){
+			this.environment = environment;
+		}
+		public Integer value() {
+			return environment;
+		}
+	}
+
 	public static enum ParameterType {
 		VALID,FULL,CUSTOM
 	}

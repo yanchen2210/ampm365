@@ -1,16 +1,15 @@
 package com.ampm365.test.serverapi.entity;
 
-import com.ampm365.test.serverapi.enumerations.Enumerations.Environment;;
-
+import com.ampm365.test.serverapi.enumerations.Enumerations.Environment;
 public class TestProperties {
 
 	//get environment
-
+	private Environment environment = Environment.Test;
 	//test 3.0 environment
 	private String OurHours30_url;
 	private String OurHours30_port;
 
-	//DB infomation
+	//DB environment
 	private String databaseHostname;
 	private String databasePort;
 	private String databaseUsername;
@@ -63,4 +62,8 @@ public class TestProperties {
 	public void setDatabasePassword(String databasePassword) {
 		this.databasePassword = databasePassword;
 	}
+
+	public Environment getEnvironment() { return environment;}
+
+	public void setEnvironment(Environment environment) { this.environment = environment; }
 }

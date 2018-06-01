@@ -5,7 +5,10 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.ampm365.test.serverapi.Register.parameter.RegisterLoginParameter;
 import com.ampm365.test.serverapi.base.ServerApiTest;
+import com.ampm365.test.serverapi.constants.Constants;
+import com.ampm365.test.serverapi.utility.StaticDataManager;
 import com.ampm365.test.serverapi.utility.TestDataGenerator;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -22,15 +25,12 @@ public class RegisterTest extends ServerApiTest {
 
     @Test
     public void checkPhoneExistTest() throws Exception{
-        String requestUrl = "http://appapi.ohtest.quanshishequ.com/api/checkPhoneExist";
-        //CloseableHttpClient httpClient = HttpClients.createDefault();
-        //HttpPost postRequest = new HttpPost(requestUrl);
-        registerLoginParameter.setPassword("13699281256");
-        List<NameValuePair> list = new ArrayList<NameValuePair>();
-        list.add(new BasicNameValuePair("phoneNumber", TestDataGenerator.generatorMobile()));
-        UrlEncodedFormEntity uefEntity = new UrlEncodedFormEntity(list, "UTF-8");
-        postRequest.setEntity(uefEntity);
-        response = httpClient.execute(postRequest);
+        registerLoginParameter = new RegisterLoginParameter();
+        registerLoginParameter.setPhoneNumber(TestDataGenerator.generatorMobile());
+
+        List<NameValuePair> Parameterlist = new ArrayList<NameValuePair>();
+        Parameterlist.add(new BasicNameValuePair("phoneNumber",registerLoginParameter.getPhoneNumber()));
+        sendPostRequest(Constants.CheckPhoneExist,Parameterlist,StaticDataManager.generatorHeaders());
         HttpEntity entity = response.getEntity();
         InputStream in = entity.getContent();
         byte[] result = new byte[2048];
@@ -38,7 +38,6 @@ public class RegisterTest extends ServerApiTest {
         String resp = new String(result, "utf-8");
         JSONObject jsonObject = JSON.parseObject(resp);
         logger.debug("Json is: " + jsonObject);
-
     }
 
 

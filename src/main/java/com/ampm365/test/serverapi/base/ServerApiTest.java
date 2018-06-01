@@ -1,10 +1,15 @@
 package com.ampm365.test.serverapi.base;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.List;
+import java.util.Map;
 
+import com.ampm365.test.serverapi.utility.HttpUtility;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -21,6 +26,7 @@ public class ServerApiTest {
 
 	private static TestProperties testProperties = PropertyHandler.getProperties();
 	private static String cookie;
+	public final Environment environment = testProperties.getEnvironment();
 
 	public Log4jImpl logger = new Log4jImpl(ServerApiTest.class.getName());
 	public static String requesturl;
@@ -53,6 +59,21 @@ public class ServerApiTest {
 				postRequest.setEntity(httpEntity);
 				response = httpClient.execute(postRequest);
 			}
+		}
+		response.close();
+	}
+
+	public void sendPostRequest(String requesturl ,List paramterList, Map headers) throws IOException {
+		if(httpClient != null){
+			HttpPost postRequest = new HttpPost(requesturl);
+			if(headers != null){
+				HttpUtility.SetPostRequestHeaderByMap(postRequest,headers);
+			}
+			if(paramterList != null){
+				UrlEncodedFormEntity uefEntity = new UrlEncodedFormEntity(paramterList, "UTF-8");
+				postRequest.setEntity(uefEntity);
+			}
+			response = httpClient.execute(postRequest);
 		}
 		response.close();
 	}

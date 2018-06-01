@@ -29,7 +29,7 @@ public class BaseRequest implements Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
-
+2
     public String getSign() {
         return sign;
     }

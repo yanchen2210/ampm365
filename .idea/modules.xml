@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ampm365.iml" filepath="$PROJECT_DIR$/.idea/ampm365.iml" />
-      <module fileurl="file://$PROJECT_DIR$/serverapi.iml" filepath="$PROJECT_DIR$/serverapi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/serverapi.iml" filepath="$PROJECT_DIR$/serverapi.iml" />
     </modules>
   </component>
 </project>
